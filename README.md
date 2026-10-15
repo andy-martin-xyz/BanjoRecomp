@@ -29,6 +29,7 @@ Join the [N64: Recompiled Community Discord](https://discord.gg/AWZThJ4dPf) to d
   * [Linux and Steam Deck Support](#linux-and-steam-deck-support)
 * [Planned Features](#planned-features)
 * [FAQ](#faq)
+* [Importing Emulator Saves](#importing-emulator-saves)
 * [Known Issues](#known-issues)
 * [Building](#building)
 * [Libraries Used and Projects Referenced](#libraries-used-and-projects-referenced)
@@ -121,6 +122,19 @@ Yes. The incorrect Mumbo tokens now use previously unused token IDs. This won't 
 
 #### Does note saving have the same issue as the XBLA version where it collects notes during Bottles' puzzles and prevents you from getting 100% completion?
 No. Care has been taken to ensure that notes are not saved during demos. 
+
+## Importing Emulator Saves
+
+Save files created by N64 emulators are fully compatible with Banjo: Recompiled. To import an emulator save:
+
+1. Locate your emulator's EEPROM save file for Banjo-Kazooie (typically a `.eep` file).
+2. Copy the `.eep` file into the saves directory for this project:
+   - Windows: `%LOCALAPPDATA%\BanjoRecomp\saves`
+   - Linux: `~/.config/BanjoRecompiled/saves`
+   - macOS: `~/Library/Application Support/BanjoRecompiled/saves`
+3. Rename the file to use a `.bin` extension (e.g., rename `BanjoKazooie.eep` to `BanjoKazooie.bin`).
+
+Save compatibility is 100% — all collected notes, jiggies, and game progress will carry over.
 
 ## Known Issues
 * Overlays such as MSI Afterburner and other software such as Wallpaper Engine can cause performance issues with this project that prevent the game from rendering correctly. Disabling such software is recommended.
